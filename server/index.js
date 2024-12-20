@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+const router = require("./routes");
 
+app.use("/api", router);
 app.get("/", (req, res) => {
   res.send(200).json({ message: "First endpoint" });
 });
